@@ -1,0 +1,59 @@
+%header.green.big-padding
+	.col-md-10.no-float.center-block
+		.col-md-6.no-padding.inline-block
+			%h1.white-text.ultra-big.kostic
+				%strong
+					¡Todos sean Bienvenidos!
+			=image_tag "tiendus.png",width:"500"
+		.col-md-5.inline-block
+			=image_tag "gorilaz1.png",width:"500"
+.grey.white-text.big-padding.kostic
+	.col-md-10.no-float.center-block
+		.absolute{style:"bottom:-4.5em;width:100%;left:0px;"}
+			.text-center.big
+				.col-md-3.inline-block
+					.white.grey-text.circle
+						%strong 1
+				.col-md-3.inline-block
+					.white.grey-text.circle
+						%strong 2
+				.col-md-3.inline-block
+					.white.grey-text.circle
+						%strong 3
+		%h2.bigger.kostic.text-center
+			%strong Todas las canciones que marcaron tu vida.
+		%div.text-center.top-space
+			.col-md-3.inline-block.text-left
+				=image_tag "chicas.png", class:"col-md-10 inline-block"
+				.top-space.kostic
+					%strong.medium
+						Karaoke
+					%p.white-text.text-justify.medium.kostic
+						Divierte con la comodidad de nuestros boxes privados equipados con pantallas de ultima generación, audio profesional que serán del agrado de tu grupo.
+			.col-md-3.inline-block.text-left
+				=image_tag "tragos.png", class:"col-md-10 inline-block"
+				.top-space.kostic
+					%strong.medium
+						Bar
+					%p.white-text.text-justify.medium
+						Disfruta de la variedad de cocteles y piqueos que brindamos para nuestros clientes en nuestra Carta Bar 
+			.col-md-3.inline-block.text-left
+				=image_tag "box.png", class:"col-md-10 inline-block"
+				.top-space.kostic
+					%strong.medium
+						Boxes
+					%p.white-text.text-justify.medium
+						Salón Karaoke. con mas de 10,000 temas, reproducidos en pantallas de ultima generación con calidad HDMI y con sistema de Audio profesional
+						
+						
+.red.white-text.big-padding.kostic{style:"margin-top:5em;"}
+	.col-md-8.no-float.text-center.center-block
+		=image_tag "notas.png",width:"500"
+		%p.medium.col-md-11.center-block.no-float.top-space
+			%p.big.kostic1 Únete a la mejor cadena de Karaoke a nivel nacional.
+			%p.medium Comuníquese con nosotros Central: 613-5000 o visita nuestra <a class="kostic1" href="https://www.facebook.com/KaraokeBar-193363567756680/?fref=ts">FanPage</a> y envianos un mensaje. 
+.top-space.big-padding
+	.col-md-11.col-xs-12.center-block.no-float.kostic1
+		=form_tag(create_email_path,method: :post,remote:true,id: "emails-form") do
+			=email_field_tag "email",nil,class:"col-xs-12 inline-block text-center landing-form",placeholder:"Escribe aquí tu email"
+		#email-info.white-text.red.large-padding.medium
