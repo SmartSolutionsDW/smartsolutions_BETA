@@ -1,7 +1,7 @@
 %header.green.big-padding
 	.col-md-10.no-float.center-block
 		.col-md-6.no-padding.inline-block
-			%h1.white-text.ultra-big.kostic
+			%h1.white-text.ultra-big.kostic 
 				%strong
 					¡Todos sean Bienvenidos!
 			=image_tag "tiendus.png",width:"500"
@@ -52,6 +52,10 @@
 		%p.medium.col-md-11.center-block.no-float.top-space
 			%p.big.kostic1 Únete a la mejor cadena de Karaoke a nivel nacional.
 			%p.medium Comuníquese con nosotros Central: 613-5000 o visita nuestra <a class="kostic1" href="https://www.facebook.com/KaraokeBar-193363567756680/?fref=ts">FanPage</a> y envianos un mensaje. 
+			%p
+			=link_to "Nuestros Productos", products_path, class:"btn btn-info kostic1 medium"
+			%a.btn.btn-info.kostic1.medium{"aria-pressed" => "true", :href => "https://smartfinal-mcastroascencio.c9users.io", :role => "button"}> Información
+			%a.btn.btn-info.kostic1.medium{"aria-pressed" => "true", :href => "https://proyecto-final-jhonataloayza.c9users.io", :role => "button"}> home
 .top-space.big-padding
 	.col-md-11.col-xs-12.center-block.no-float.kostic1
 		=form_tag(create_email_path,method: :post,remote:true,id: "emails-form") do
